@@ -6,6 +6,13 @@ Pasos a seguir para la instalación del sistema
 
 * 1.0
 
+Descargar Yii - y subir al servidor.. al mismo nivel que la carpeta del proyecto.
+
+htdocs/yii
+htdocs/datos
+
+https://github.com/yiisoft/yii/releases/download/1.1.17/yii-1.1.17.467ff50.tar.gz
+
 
 ### How do I get set up? ###
 
