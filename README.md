@@ -2,9 +2,8 @@
 
 Pasos a seguir para la instalación del sistema
 
-### Repository for "Gestión Sumar" ###
+### Repository for "Datos Abiertos - OpenGov" ###
 
-* Gestión de la UGSP
 * 1.0
 
 
