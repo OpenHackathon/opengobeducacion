@@ -21,7 +21,9 @@ $this->widget('zii.widgets.CMenu',array(
 'encodeLabel'=>false,                    
 'items'=>array(
 
-     array('label'=>'Establecimientos', 'url'=>array('/establecimiento/index'), 'visible'=>Yii::app()->user->isGuest),
+     array('label'=>'Asistencia Escolar', 'url'=>array('/establecimiento/index'), 'visible'=>!Yii::app()->user->isGuest),
+     array('label'=>'Repitentes', 'url'=>array('/establecimiento/curso'), 'visible'=>!Yii::app()->user->isGuest),
+     array('label'=>'Mapas', 'url'=>array('/establecimiento/mapa'), 'visible'=>!Yii::app()->user->isGuest),
     array('label'=>'Acceso', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
     array('label'=>'Salir ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest),
     /* array('label'=>'ITEMS', 'url'=>'#','itemOptions'=>array('class'=>'dropdown','tabindex'=>"-1"),'linkOptions'=>array('class'=>'dropdown-toggle','data-toggle'=>"dropdown"), 

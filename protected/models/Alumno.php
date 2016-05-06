@@ -12,6 +12,7 @@
  * @property string $division
  * @property string $sexo
  * @property string $fechanacimiento
+ * @property string $fechanac
  * @property integer $id
  */
 class Alumno extends CActiveRecord

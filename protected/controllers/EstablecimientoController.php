@@ -32,8 +32,8 @@ class EstablecimientoController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
-				'users'=>array('*'),
+				'actions'=>array('index','view','mapa','curso'),
+				'users'=>array('@'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
 				'actions'=>array('create','update'),
@@ -56,6 +56,33 @@ class EstablecimientoController extends Controller
 	{
 		$this->render('view',array(
 			'model'=>$this->loadModel(),
+		));
+	}
+
+
+	/**
+	 * Displays a particular model.
+	 */
+	public function actionCurso()
+	{
+		$this->render('curso',array(
+			//'model'=>$this->loadModel(),
+		));
+	}
+
+
+	/**
+	 * Displays a particular model.
+	 */
+	public function actionMapa()
+	{
+
+		$this->layout='//layouts/column12';
+
+		$establecimientos = Establecimiento::model()->findAll();
+
+		$this->render('mapa',array(
+			'establecimientos'=>$establecimientos,
 		));
 	}
 

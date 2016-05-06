@@ -8,10 +8,7 @@ $this->pageTitle=Yii::app()->name . ' - Acceso al Sistema';
 ?>
 <div class="page-header" style="text-aling:center">
 
-    <div id="logos">
-	 <img src="<?php echo Yii::app()->baseUrl; ?>/images/salud.png" style="width:180px;">
-    <img src="<?php echo Yii::app()->baseUrl; ?>/images/nacer.png" style="width:180px;">
-    </div>
+    
 </div>
 <div class="row-fluid">
 	

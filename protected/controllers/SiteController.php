@@ -30,35 +30,7 @@ class SiteController extends Controller
 		// renders the view file 'protected/views/site/index.php'
 		// using the default layout 'protected/views/layouts/main.php'
 		//$this->render('index');
-		
-		if(Yii::app()->user->getState('role')){
-			if(!Yii::app()->user->isGuest && (Yii::app()->user->role != Tools::USUARIO_EFECTOR)){
-				$this->redirect(array('site/help'));
-			}else{
-				$this->redirect(array('beneficiario/consulta'));
-			}
-		}else{
-			$this->redirect(array('efector/admin'));
-		}
-
-	}
-
-	/**
-	 * This is the default 'index' action that is invoked
-	 * when an action is not explicitly requested by users.
-	 */
-	public function actionHelp()
-	{
-		// renders the view file 'protected/views/site/index.php'
-		// using the default layout 'protected/views/layouts/main.php'
-		//$this->render('index');
-		if(Yii::app()->user->role == Tools::USUARIO_EFECTOR){
-			$this->render('helpefector');
-		}else{
-			$this->render('help');	
-		}
-		
-		
+		$this->redirect(array('norma/listado'));
 
 	}
 
@@ -108,14 +80,10 @@ class SiteController extends Controller
 	public function actionLogin()
 	{
 		
-		/*if(Yii::app()->user->getId() != null) {
-    		if (Yii::app()->user->role == Yii::app()->params["usuario_admin"] || Yii::app()->user->role == Yii::app()->params["usuario_supervisor"]) {
-					$this->redirect(array('site/index'));
-			}else{
-					$this->redirect(array('site/index'));
-			}
-		}*/
-		
+		if (Yii::app()->user->getId() !== null) {
+    		$this->redirect(array('establecimiento/mapa'));
+		}
+
 		$model=new LoginForm;
 
 		// if it is ajax validation request
@@ -130,16 +98,8 @@ class SiteController extends Controller
 		{
 			$model->attributes=$_POST['LoginForm'];
 			// validate user input and redirect to the previous page if valid
-			if($model->validate() && $model->login()){
-				if (Yii::app()->user->role == Yii::app()->params["usuario_admin"] || Yii::app()->user->role == Yii::app()->params["usuario_supervisor"]) {
-					$this->redirect(array('site/index'));
-				}else{
-					$this->redirect(array('site/index'));
-				}
-				
-			}
-				
-				//$this->redirect(Yii::app()->user->returnUrl);
+			if($model->validate() && $model->login())
+				$this->redirect(array('establecimiento/mapa'));
 		}
 		// display the login form
 		$this->render('login',array('model'=>$model));
@@ -151,10 +111,6 @@ class SiteController extends Controller
 	public function actionLogout()
 	{
 		Yii::app()->user->logout();
-		$this->redirect(Yii::app()->homeUrl);
+		$this->redirect(array('site/login'));
 	}
-	
-
-	
-	
 }

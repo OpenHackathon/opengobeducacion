@@ -58,7 +58,7 @@ class UserIdentity extends CUserIdentity {
 		else{
 			$this->_id=$user->id;
 			$this->_role=$user->usuariotipo_id;
-			$this->_efector_id=$user->efector_id;
+			//$this->_efector_id=$user->efector_id;
 			
 			
 
@@ -66,7 +66,7 @@ class UserIdentity extends CUserIdentity {
 
 			$this->setState('role', $user->usuariotipo_id);
 			$this->setState('area', $user->area_id);
-			$this->setState('efector_id', $user->efector_id);
+			//$this->setState('efector_id', $user->efector_id);
 			
 			$this->username=$user->username;			
 			$this->errorCode=self::ERROR_NONE;
@@ -89,7 +89,7 @@ class UserIdentity extends CUserIdentity {
 			Yii::app()->session['area_id'] = $info_usuario->area_id;
         	Yii::app()->session['id'] = $info_usuario->id;
         	Yii::app()->session['loggedin'] = true;
-        	Yii::app()->session['efector_id'] = $info_usuario->efector_id;
+        	//Yii::app()->session['efector_id'] = $info_usuario->efector_id;
 
 			
 
