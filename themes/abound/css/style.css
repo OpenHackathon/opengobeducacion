@@ -1,0 +1,177 @@
+#logos{
+	margin: 10px auto;
+	width: 370px;
+}
+
+.left{
+	float: left;
+}
+
+.right{
+	float: right;
+}
+
+.clear{
+	clear: both;
+}
+
+
+.form-lineal label{ 
+	display: inline;
+	margin: 10px 15px 0px 0px;	
+}
+
+.form-lineal .row{ 
+	margin: 10px 0px;
+	}
+
+.input-lineal{
+	margin: 10px 0px;
+}
+
+.input-lineal label{
+	display: inline;
+	margin: 10px 15px 0px 0px;	
+
+}
+.asistio1{
+	background-color: #66BB6A;
+	color: #FFF;
+}
+
+.estado1{
+	background-color: #FFEB3B;
+	color: #000;
+}
+.estado2{
+	background-color: #66BB6A;
+	color: #FFF;
+}
+.estado3{
+	background-color: #0088CC;
+	color: #FFF;
+}
+.estado4{
+	background-color: #FFEB3B;
+	color: #000;
+}
+
+.activo1{
+	background-color: #66BB6A;
+	color: #FFF;	
+}
+
+
+.tabla-estados table tbody tr td{
+	border: 1px solid #555;
+	padding: 1px;
+	text-align: center;
+}
+
+.subnav{
+	
+}
+
+.subnav  .navbar-inner{
+	display: none;
+}
+
+footer .subnav  .navbar-inner{
+	display: block;
+}
+
+.breadcrumb{
+	margin: 0 0 5px;
+}
+span.required{
+	font-size: 20px;
+	font-weight: bold;
+	color: #f00;
+}
+
+.errorSummary{	
+	
+	color: #f00;	
+}
+
+.errorMessage{
+	color: #f00;		
+}
+
+.summary{
+	font-weight: bold;
+	font-size: 12px;
+	color: #1d2e7b;
+	margin: 5px 0px 10px;
+}
+
+
+
+div.flash-error, div.flash-notice, div.flash-success
+{
+	padding:.8em;
+	margin-bottom:1em;
+	border:2px solid #ddd;
+}
+
+div.flash-error
+{
+	background:#FBE3E4;
+	color:#8a1f11;
+	border-color:#FBC2C4;
+}
+
+div.flash-notice
+{
+	background:#FFF6BF;
+	color:#514721;
+	border-color:#FFD324;
+}
+
+div.flash-success
+{
+	background:#E6EFC2;
+	color:#264409;
+	border-color:#C6D880;
+}
+
+div.flash-error a
+{
+	color:#8a1f11;
+}
+
+div.flash-notice a
+{
+	color:#514721;
+}
+
+div.flash-success a
+{
+	color:#264409;
+}
+
+.container-fluid{
+	padding-top: 40px;	
+	min-height: 500px;
+}
+
+.seleccion-periodo{
+	background-color: #F9D36F;
+	/*FFAC4D*/
+	border: 1px dotted #F79424;
+	padding: 8px 20px;
+	font-size: 14px;
+	margin-top: 10px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.seleccion-periodo-select{
+	background-color: #F79424;
+	border: 1px dotted #F9D36F;
+	padding: 8px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
